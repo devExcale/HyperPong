@@ -16,12 +16,21 @@ public class PlayerController : MonoBehaviour
     private float _baseWidth;
     private float _halfWidth;
 
+    private int _originalLayer;
+    private int _ignoreRaycastLayer;
+    private int _ignoreRaycastLayerMask;
+
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _collider = GetComponent<BoxCollider>();
+        
         _baseWidth = transform.localScale.z;
         _halfWidth = _baseWidth / 2;
+        
+        _originalLayer = gameObject.layer;
+        _ignoreRaycastLayer = LayerMask.NameToLayer("Ignore Raycast");
+        _ignoreRaycastLayerMask = ~LayerMask.GetMask("Ignore Raycast");
     }
 
     private void Update()
@@ -47,17 +56,20 @@ public class PlayerController : MonoBehaviour
         // Detect collision in movement direction
         // Collision is detected between the side opposite to the movement
         // and the end position of that side
-        RaycastHit raycast;
         Vector3 sideStartPos = transform.position - _displacementDirection * _halfWidth;
         Vector3 sideEndPos = sideStartPos + _displacementDirection * (_displacement.magnitude + _baseWidth);
-        bool collision = Physics.Linecast(sideStartPos, sideEndPos + _displacement, out raycast);
+        RaycastHit raycast;
+
+        gameObject.layer = _ignoreRaycastLayer;
+        bool collision = Physics.Linecast(sideStartPos, sideEndPos + _displacement, out raycast, _ignoreRaycastLayerMask);
+        gameObject.layer = _originalLayer;
 
         // Scale down displacement to collision distance
         if (collision)
         {
             // Handle further collision: if paddle is inside the object,
             // repel the paddle outside the object
-            float distance = (raycast.distance - _baseWidth) * Mathf.Sign(raycast.distance - _baseWidth);
+            float distance = raycast.distance - _baseWidth;
             _displacement = distance * _displacementDirection;
         }
     }
