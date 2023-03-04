@@ -5,6 +5,8 @@ namespace Controllers
     public class PlayerController : MonoBehaviour
     {
 
+        public float speedMultiplier = 1;
+
         [SerializeField]
         private float speed = 5;
     
@@ -14,7 +16,6 @@ namespace Controllers
         private Vector3 _displacement;
         private Vector3 _displacementDirection;
     
-        private float _speedMultiplier = 1;
         private float _baseWidth;
         private float _halfWidth;
 
@@ -53,6 +54,13 @@ namespace Controllers
             // - Move collision distance otherwise
         }
 
+        private void GetInput()
+        {
+            float mod = speed * speedMultiplier * Time.fixedDeltaTime * Input.GetAxis("Vertical");
+            _displacement = mod * Vector3.forward;
+            _displacementDirection = _displacement.normalized;
+        }
+
         private void ComputeMovement()
         {
             // Detect collision in movement direction
@@ -79,13 +87,6 @@ namespace Controllers
         private void UpdateMovement()
         {
             transform.Translate(_displacement, Space.World);
-        }
-
-        private void GetInput()
-        {
-            float mod = speed * _speedMultiplier * Time.fixedDeltaTime * Input.GetAxis("Vertical");
-            _displacement = mod * Vector3.forward;
-            _displacementDirection = _displacement.normalized;
         }
         
     }
