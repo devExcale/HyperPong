@@ -7,7 +7,8 @@ namespace Controllers
     public class BallController : MonoBehaviour
     {
         
-        public Vector3 Velocity => baseSpeed * speedMultiplier * _direction;
+        public Vector3 Velocity => baseSpeed * speedMultiplier * Direction;
+        public Vector3 Direction { get; set; }
         public float speedMultiplier = 1f;
 
         [SerializeField]
@@ -17,7 +18,6 @@ namespace Controllers
         private float _startingAngleRad;
 
         private Rigidbody _rigidbody;
-        private Vector3 _direction;
 
         // Start is called before the first frame update
         void Start()
@@ -25,7 +25,7 @@ namespace Controllers
             _rigidbody = GetComponent<Rigidbody>();
 
             _startingAngleRad = (float)(startingAngle / 180d * Math.PI);
-            _direction = new Vector3(Mathf.Cos(_startingAngleRad), 0, Mathf.Sin(_startingAngleRad));
+            Direction = new Vector3(Mathf.Cos(_startingAngleRad), 0, Mathf.Sin(_startingAngleRad));
         }
 
         private void DrawVelocity()
@@ -49,13 +49,13 @@ namespace Controllers
             // Get the vector normal to the surface of impact
             // and compute the direction component on that axis
             Vector3 normalSurface = collision.impulse.normalized;
-            Vector3 normalDirection = Vector3.Dot(_direction, normalSurface) * normalSurface;
+            Vector3 normalDirection = Vector3.Dot(Direction, normalSurface) * normalSurface;
         
             Debug.DrawLine(pos, pos + normalDirection, Color.green);
 
             // Subtract the velocity normal to the impact
             // once to null it, twice to invert it
-            _direction -= 2 * normalDirection;
+            Direction -= 2 * normalDirection;
 
             Debug.DrawLine(contactPoint.point, contactPoint.point + collision.impulse.normalized, Color.red, 5f);
         }

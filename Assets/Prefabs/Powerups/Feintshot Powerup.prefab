@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 175238898475105672}
   - component: {fileID: 5983531612047264251}
   - component: {fileID: 4750193304642040491}
+  - component: {fileID: 3629592740613148316}
   m_Layer: 0
   m_Name: Feintshot Powerup
   m_TagString: Untagged
@@ -198,6 +199,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3629592740613148316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5464151771879904638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787f5eeeb68f4d93ade6b19223ef1e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ability: {fileID: 11400000, guid: 202a0b85f5724cd4fa1b181d31ef8035, type: 2}
 --- !u!1 &5644734618703353549
 GameObject:
   m_ObjectHideFlags: 0

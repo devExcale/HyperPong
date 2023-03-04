@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Abilities;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ namespace Controllers
 
         private void Update()
         {
-            foreach (Ability ability in _abilities)
+            foreach (Ability ability in _abilities.ToList())
                 ability.DoUpdate(this);
         }
 
