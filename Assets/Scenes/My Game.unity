@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667626, g: 0.484271, b: 0.56452334, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1010,11 +1010,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1826063141, guid: 0a915c1f215a95043928eb6475bd2dc8, type: 3}
       propertyPath: speed
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1826063141, guid: 0a915c1f215a95043928eb6475bd2dc8, type: 3}
       propertyPath: startingAngle
-      value: 110
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1826063141, guid: 0a915c1f215a95043928eb6475bd2dc8, type: 3}
       propertyPath: startingImpulse
@@ -1100,6 +1100,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9088203542468989298, guid: 0a915c1f215a95043928eb6475bd2dc8,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a915c1f215a95043928eb6475bd2dc8, type: 3}
