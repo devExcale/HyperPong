@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 5733859845191488095, guid: 4cb1f208117a665429b8e32c971bfd52,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5733859845191488095, guid: 4cb1f208117a665429b8e32c971bfd52,
         type: 3}
@@ -270,7 +270,7 @@ PrefabInstance:
     - target: {fileID: 2526501044836934260, guid: f14c227405ed6004690d6f2745183835,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2526501044836934260, guid: f14c227405ed6004690d6f2745183835,
         type: 3}
@@ -389,7 +389,7 @@ PrefabInstance:
     - target: {fileID: 2238181851961897311, guid: 0c83caa7545f63945b8ecc5602a8cec2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2238181851961897311, guid: 0c83caa7545f63945b8ecc5602a8cec2,
         type: 3}
@@ -486,11 +486,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sizeup Powerup
       objectReference: {fileID: 0}
-    - target: {fileID: 8909941083545866043, guid: 0c83caa7545f63945b8ecc5602a8cec2,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c83caa7545f63945b8ecc5602a8cec2, type: 3}
 --- !u!1001 &6508773193120977838
@@ -523,7 +518,7 @@ PrefabInstance:
     - target: {fileID: 7822752871985351797, guid: 8ab198233d7c3a342809fcab055bdc05,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7822752871985351797, guid: 8ab198233d7c3a342809fcab055bdc05,
         type: 3}
@@ -637,7 +632,7 @@ PrefabInstance:
     - target: {fileID: 480329646432090674, guid: 5c2b120b4da377d45bef727ae7a3dd7b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 480329646432090674, guid: 5c2b120b4da377d45bef727ae7a3dd7b,
         type: 3}
