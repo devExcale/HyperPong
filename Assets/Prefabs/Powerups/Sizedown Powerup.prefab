@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 9200651375583640612}
   - component: {fileID: 8732382959923855399}
   - component: {fileID: 6890978371218541536}
+  - component: {fileID: -7176238810610180430}
   m_Layer: 0
   m_Name: Sizedown Powerup
   m_TagString: Untagged
@@ -179,6 +180,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7176238810610180430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219518370129297545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787f5eeeb68f4d93ade6b19223ef1e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ability: {fileID: 11400000, guid: 2522be4176846b34a8057b1c856a3920, type: 2}
 --- !u!1 &9030704119512946372
 GameObject:
   m_ObjectHideFlags: 0
